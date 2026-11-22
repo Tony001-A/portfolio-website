@@ -1,0 +1,144 @@
+/* Centering everything on a smooth dark background */
+
+
+/* --- Global Styles & Reset --- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* --- Container App Box --- */
+.todo-container {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 450px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.todo-container h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #333333;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+/* --- Main Input Section --- */
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.input-section input:focus {
+  border-color: #4f46e5; /* Nice indigo accent focus */
+}
+
+.input-section button {
+  padding: 12px 20px;
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.input-section button:hover {
+  background-color: #4338ca;
+}
+
+/* --- To-Do List Area --- */
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8fafc;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  gap: 12px;
+}
+
+.todo-item span {
+  color: #334155;
+  font-size: 1rem;
+  word-break: break-word; /* Prevents long words from breaking layout */
+}
+
+/* --- Inline Edit Input --- */
+.todo-item input[type="text"] {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 2px solid #3b82f6; /* Blue border to indicate edit mode */
+  border-radius: 6px;
+  outline: none;
+}
+
+/* --- Action Button Groups --- */
+.button-group {
+  display: flex;
+  gap: 8px;
+}
+
+.todo-item button {
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Target specific button labels via content or structural styling */
+.todo-item button:contains('Save'), 
+.todo-item button {
+  background-color: #e2e8f0;
+  color: #334155;
+}
+
+.todo-item button:hover {
+  background-color: #cbd5e1;
+}
+
+/* Specific styling for your Delete button to make it stand out */
+.button-group button:last-child {
+  background-color: #fee2e2;
+  color: #ef4444;
+}
+
+.button-group button:last-child:hover {
+  background-color: #fca5a5;
+}

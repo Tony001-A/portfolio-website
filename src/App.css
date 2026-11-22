@@ -1,0 +1,330 @@
+/* --- Global Configuration Reset --- */
+/* --- Global Reset --- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --- Navigation Bar (Fixed Spacing) --- */
+.site-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f172a;
+  padding: 1rem 2.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.nav-logo {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 800;
+  cursor: pointer;
+  margin-right: auto; /* Pushes navigation links cleanly to the right */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  color: #94a3b8;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-links li:hover {
+  color: #ffffff;
+  background-color: #1e293b;
+}
+
+.nav-links li.active-link {
+  color: #ffffff;
+  background-color: #4f46e5;
+}
+
+/* --- Main Stage --- */
+.main-stage {
+  flex: 1;
+  max-width: 960px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  box-sizing: border-box;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  text-align: center;
+  padding: 4rem 1rem;
+  margin-bottom: 3rem;
+}
+
+.badge {
+  background-color: #e0e7ff;
+  color: #4f46e5;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  line-height: 1.15;
+  margin: 0 0 1.5rem 0;
+  color: #0f172a;
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+  color: #475569;
+  max-width: 650px;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.primary-btn {
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: #4f46e5;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.primary-btn:hover {
+  background-color: #4338ca;
+  transform: translateY(-2px);
+}
+
+.secondary-btn {
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 700;
+  background-color: #ffffff;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.secondary-btn:hover {
+  background-color: #f1f5f9;
+}
+
+/* --- Features & About Grid --- */
+.features-section {
+  margin-bottom: 4rem;
+}
+
+.features-section h2, .about-header h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color:#4f46e5;
+}
+
+.about-header p {
+  text-align: center;
+  font-size: 1.15rem;
+  color: #475569;
+  max-width: 650px;
+  margin: 0 auto 3rem auto;
+  line-height: 1.6;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.info-card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.info-card h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.25rem;
+  color: #0f172a;
+}
+
+.info-card p {
+  margin: 0;
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* --- Call to Action Banner --- */
+.cta-banner {
+  background-color: #0f172a;
+  color: #ffffff;
+  text-align: center;
+  padding: 3.5rem 2rem;
+  border-radius: 16px;
+  margin-top: 2rem;
+}
+
+.cta-banner h2 {
+  margin: 0 0 1rem 0;
+  font-size: 2rem;
+}
+
+.cta-banner p {
+  color: #cbd5e1;
+  font-size: 1.15rem;
+  margin: 0 0 2rem 0;
+}
+
+/* --- Contact Page Layout --- */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 32px;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 14px;
+  font-size: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  background-color: #ffffff;
+  color: #0f172a;
+  font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #4f46e5;
+}
+
+/* --- Footer --- */
+.site-footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #0f172a;
+  color: #94a3b8;
+  margin-top: auto;
+}
+
+/* --- SCROLL REVEAL ANIMATION STYLES --- */
+.reveal-section {
+  opacity: 0;                     /* Starts completely invisible */
+  transform: translateY(40px);    /* Starts pushed down 40 pixels */
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out; /* Smooth glide speed */
+}
+
+
+.reveal-section.is-visible {
+  opacity: 1;                     /* Fades into full visibility */
+  transform: translateY(0);       /* Glides up into its natural spot */
+}
+/* --- MOBILE RESPONSIVENESS (Screens smaller than 768px) --- */
+@media (max-width: 768px) {
+  /* 1. Stack the navbar logo and links cleanly */
+  .site-navbar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+  }
+
+  /* 2. Reduce large desktop padding on pages */
+  .page-container {
+    padding: 1.5rem 1rem;
+  }
+
+  /* 3. Shrink oversized hero headlines so words don't overflow */
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  /* 4. Stack the hero buttons vertically */
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons button {
+    width: 100%;
+  }
+
+  /* 5. Force 3-column card grids into 1 single vertical column */
+  .cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* 6. Stack the Contact form and Contact info card */
+  .contact-layout {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+}
